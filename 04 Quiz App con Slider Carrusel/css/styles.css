@@ -1,0 +1,280 @@
+*,
+*::after,
+*::before{
+     margin:0;
+     padding: 0;
+     box-sizing: border-box;
+}
+html, body{
+  font-family: 'Roboto', 'sans-serif';
+}
+.contenedor{
+  width: 90%;
+  max-width:  70vw;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-left: 5vw;
+  padding-right: 5vw; */
+}
+#slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  z-index: 500;
+  height: 100%;
+  background: #fff;
+}
+.active {
+  z-index: 1000;
+}
+.slideInLeft {
+  animation-name: animateInLeft;
+  z-index: 1000;
+}
+.slideInRight {
+  animation-name: animateInRight;
+  z-index: 1000;
+}
+.slideOutLeft {
+  transform: translateX(-100%);
+}
+.slideOutRight {
+  transform: translateX(100%);
+}
+@keyframes animateInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes animateInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 20000;
+}
+.slider-back-btn,
+.slider-next-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #3ACCE1;
+  font-size: 20px;
+  width: 10vw;
+  padding: 10px 12px;
+  transition: all 0.2s;
+  margin: 20px;
+  color: #fff;
+}
+.slider-back-btn:hover,
+.slider-next-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.question{
+  font-size: 29px;
+  color: #000;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.overlay-text {
+  position: absolute;
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #707070;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  opacity: 1;
+}
+.contenedor .main-text{
+  color: #707070;
+  font-size: 40px;
+  font-weight: 600;
+  max-width: 660px;
+  margin: auto;
+}
+.contenedor .questions{
+  max-width: 1200px;
+  margin: auto;
+}
+.contenedor .text {
+  text-align: left;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000;
+  /* max-width: 30%; */
+  /* margin: auto; */
+  margin-bottom: 1rem;
+}
+.contenedor .choice-answer{
+  margin: auto;
+  width: max-content;
+}
+#slider .slide:nth-child(3) .question,
+#slider .slide:nth-child(7) .question{
+  text-align: left;
+}
+.choice-container{
+  margin-bottom: 2rem;
+  width: 50vw;
+  background: #3ACCE1;
+  font-size: 1.3rem;
+}
+.choice-container:hover{
+  cursor: pointer;
+  box-shadow: 0 .4rem 1.4rem 0 rgba(6, 103, 247, .5);
+  transform: scale(1.02);
+  transition: transform 100ms;
+}
+.choice-prefix{
+  padding: 2rem 2.5rem;
+  color: #fff;
+}
+.choice-text{
+  padding: 1rem;
+  text-indent: 2.5vw;
+  width: 100%;
+  color: #fff;
+}
+.list-answer{
+  font-size: 1.3rem;
+  line-height:2;
+  color: #000;
+}
+.list-answer p{ 
+    line-height: normal;
+}
+.main-tarifas{
+  width: 50vw;
+  margin: auto;
+}
+.tarifas{
+  display: grid;
+  grid-template-columns: 200px 30px 200px 30px 150px;
+  align-items: center;
+  gap: 1vw;
+  justify-content: center;
+}
+.tarifas_texto{
+  background: #EEAE43;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  /* width: 200px; */
+  text-align: center;
+}
+#slider .slide:nth-child(7) .question{
+  margin-bottom: 1.5rem;
+}
+#slider .slide:nth-child(7) .main-tarifas:nth-child(1){
+  margin-bottom: 2rem;
+}
+.tarifas_signo1, 
+.tarifas_signo2{
+  background: #908E8E;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+.tarifas_signo2{
+  background: #03C551;
+}
+.tarifas_resultado{
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.correct{
+  background: linear-gradient(32deg, rgba(11,223,36) 0%, rgb(41,232,111) 100%);
+}
+.incorrect{
+  background: linear-gradient(32deg, rgba(230,29,29,1) 0%, rgb(224,11,11,1) 100%);
+}
+
+
+
+@media(max-width:768px){
+  .contenedor .main-text{
+    font-size: calc(1em + 1vw);
+  }
+  .contenedor .choice-answer {
+    margin: initial;
+    width: 100%;
+  }
+  .question{
+    font-size: calc(1em + 1vw);
+    margin-bottom: 1.5rem;
+  }
+  .choice-container{
+    font-size: calc(.7em + 1vw);
+    width: 100%;  
+  }
+  .contenedor .text {
+    font-size: calc(.7em + 1vw);
+    line-height: normal;
+  }
+  .list-answer{
+    font-size: calc(.7em + 1vw);
+  }
+  .main-tarifas {
+    width: auto;
+    margin: auto;
+  }
+  p.tarifas_texto {
+    font-size: calc(.7em + 1vw);
+  }
+  .tarifas{
+      grid-template-columns: 1fr;
+  }
+  .tarifas_signo1, .tarifas_signo2 {
+    justify-self: center;
+  }
+    .tarifas_resultado {
+        text-align: center;
+        font-size: calc(.7em + 1vw);
+    }
+}
+@media(max-width: 1024px){
+  .contenedor .main-text{
+    font-size: calc(1em + 1vw);
+  }
+  #slider .slide:nth-child(7) .main-tarifas:nth-child(2) ul.list-answer {
+    padding-left: 0;
+  }
+}
+@media(min-width:769px){
+    .list-answer {
+      padding-left: 10vw;
+      line-height: 2.5;
+    }
+  #slider .slide:nth-child(7) .main-tarifas:nth-child(2) .list-answer{
+      padding-left: 5vw;
+    }
+}

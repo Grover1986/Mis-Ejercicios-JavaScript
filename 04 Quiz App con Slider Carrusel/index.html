@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="./css/styles.css">
+     <title>Quiz App con Slider Carrusel</title>
+</head>
+<body>
+     <div id="slider">
+          <div class="slide active">
+            <div class="overlay-text">
+              <div class="contenedor">
+                <p class="main-text">
+                  Haremos unas pocas preguntas después de cada presentación, no te preocupes es solo para comprobar que no seas un robot.
+                </p>
+              </div>
+            
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+                <h2 id="question" class="question">¿Cuál es tu disponibilidad de horario para laborar?</h2>
+                <div class="contenedor">
+                    <div class="choice-answer">
+                        <div class="choice-container">
+                            <p class="choice-text" data-number="1">Indiferente</p>
+                        </div>
+                        <div class="choice-container">
+                            <p class="choice-text" data-number="2">Mañanas</p>
+                        </div>
+                        <div class="choice-container">
+                            <p class="choice-text" data-number="3">Medio día</p>
+                        </div>
+                        <div class="choice-container">
+                            <p class="choice-text" data-number="4">Tardes</p>
+                        </div>
+                        <div class="choice-container">
+                        <p class="choice-text" data-number="5">Noches</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+               <h2 id="question" class="question">¿Qué es Imax courier?</h2>
+               <div class="contenedor">
+                     <p class="text">
+                        IMAX es una startup peruana especializada en conectar negocios; proveedores con minoristas, permitiendo que una tienda de barrio de cualquier parte del Perú cada vez esté más cerca de sus proveedores a través de nuestras plataformas de comercio electrónico y de logística. Actualmente contamos con aplicativo móvil de logística, para el usuario-cliente y para el usuario-motorizado para realizar servicios EXPRESS a DOMICILIO, y servicios PROGRAMADOS. 
+                    </p>
+                    <p class="text">
+                        El usuario cliente solicita un servicio a través de su aplicativo y este servicio le llega al aplicativo del motorizado mas cercano, pudiendo este aceptar o rechazar.
+                    </p>
+                    <p class="text">
+                        La solicitud que le llegará al motorizado estará no mayor a 5km de su ubicación real.
+                    </p>
+               </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+              <h2 id="question" class="question">¿Con qué tipos de servicio cuenta Imax para los motorizados?</h2>
+              <div class="contenedor">
+                <div class="choice-answer">
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="1">Express y Normal</p>
+                    </div>
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="2">Express y Programado</p>
+                    </div>
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="3">Normal y Programado</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+              <h2 id="question" class="question">¿Hasta qué distancia máxima de tu ubicación podría llegarte una solicitud?</h2>
+              <div class="contenedor">
+                  <div class="choice-answer">
+                        <div class="choice-container">
+                            <p class="choice-text" data-number="1">0km - 3km</p>
+                        </div>
+                        <div class="choice-container">
+                            <p class="choice-text" data-number="2">0km - 7km</p>
+                        </div>
+                        <div class="choice-container">
+                            <p class="choice-text" data-number="3">0km - 5km</p>
+                        </div>
+                  </div>
+              </div>
+            
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+              <h2 id="question" class="question">Ventajas de repartir usando Imax courier</h2>
+              <div class="contenedor">
+                   <ul class="list-answer">
+                        <li><p>Tu decides qué servicios tomar.</p> </li>
+                        <li><p>Tienes flexibilidad de horarios.</p> </li>
+                        <li><p>Puedes combinar con cualquier actividad o profesión.</p> </li>
+                        <li><p>Puedes usar la app en tus tiempos libres.</p> </li>
+                        <li><p>Contamos con un servicio de atención al usuario, te daremos soporte.</p> </li>
+                        <li><p>Mayor margen de ganancia por servicio respecto a otros Courier.</p> </li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+                <div class="contenedor">
+                    <div class="main-tarifas">
+                        <h2 id="question" class="question">Tarifas</h2>
+                        <div class="tarifas">
+                            <p class="tarifas_texto">BASE FIJA</p>
+                            <span class="tarifas_signo1">+</span>
+                            <p class="tarifas_texto">KM RECORRIDO</p>
+                            <span class="tarifas_signo2">=</span>
+                            <p class="tarifas_resultado">Ganancia del motorizado</p>
+                        </div>
+                    </div>
+                    <div class="main-tarifas">
+                         <h2 id="question" class="question">Periodo de pago</h2>
+                         <ul class="list-answer">
+                             <li><p>Los pagos se realizarán cada 7 días.</p> </li>
+                             <li><p>Por lo tanto todos los pedidos realizados en este periodo de tiempo se irán sumando y lo recibirás en tu cuenta bancaria.</p> </li>
+                             <li><p>En caso de haberse efectuado servicios cuyo pago hayan sido en efectivo, deberás entregar todo el efectivo al finalizar tu jornada mediante yape o por transferencia a la cuenta de imax.</p> </li>
+                         </ul>
+                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+              <h2 id="question" class="question">Requisitos</h2>
+              <div class="contenedor">
+                   <ul class="list-answer">
+                        <li><p>Tener 18 años a más.</p> </li>
+                        <li><p>Tener un celular smartphone con buena conexión a internet.</p></li>
+                        <li><p>Contar con una moto propia.</p> </li>
+                        <li><p>Tener cuenta de ahorro en soles en el banco BCP para recibir sus pagos.</p> </li>
+                        <li><p>Contar con un domicilio fijo, comprobable (contrato de arrendamiento, recibo de servicios).</p> </li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+              <h2 id="question" class="question">¿Cada cuánto tiempo Imax hace el pago de mis servicios?</h2>
+              <div class="contenedor">
+                <div class="choice-answer">
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="1">Por cada servicio</p>
+                    </div>
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="2">Diario</p>
+                    </div>
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="3">Quincenal</p>
+                    </div>
+                    <div class="choice-container">
+                      <p class="choice-text" data-number="4">Semanal</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+              <h2 id="question" class="question">¿Imax paga una tarifa fija por servicio?</h2>
+              <div class="contenedor">
+                <div class="choice-answer">
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="1">Si</p>
+                    </div>
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="2">No, paga una tarifa base + variable por km</p>
+                    </div>
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="3">Imax sólo paga variable por km</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+              <h2 id="question" class="question">¿Dónde voy a recibir el pago de mis servicios?</h2>
+              <div class="contenedor">
+                <div class="choice-answer">
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="1">En efectivo</p>
+                    </div>
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="2">En mi cuenta del BCP</p>
+                    </div>
+                    <div class="choice-container">
+                        <p class="choice-text" data-number="3">En mi cuenta del Interbank</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="overlay-text">
+              <h2 id="question" class="question">Imax aconseja</h2>
+              <div class="contenedor">
+                   <ul class="list-answer">
+                        <li><p>Sonrisa de oreja a oreja.</p> </li>
+                        <li><p>Trato amable y respetuoso.</p></li>
+                        <li><p>Si tienes algún problema con el servicio, no dudes en comunicarte con soporte de Imax, ellos te darán una solución rápida.</p> </li>
+                        <li><p>Activarte en los horarios de mayor demanda.</p> </li>
+                        <li><p>Cuanto mas servicios realices más servicios te llegaran.</p> </li>
+                        <li><p>Estar alrededor de negocios o centros comerciales.</p> </li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="buttons">
+            <div class="slider-back-btn">
+              <span><i class="fas fa-angle-left"></i> ATRÁS</span>
+            </div>
+            <div class="slider-next-btn">
+              <span>SIGUIENTE <i class="fas fa-angle-right"></i></span>
+            </div>
+          </div>
+        </div>
+     
+     <script src="./js/slider.js"></script>
+     <script src="./js/game.js"></script>
+</body>
+</html>
